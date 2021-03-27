@@ -8,7 +8,7 @@ namespace InternshipTest
 {
     public class Knowledge
     {
-        int level;
+        public int level;
         public Knowledge(int level_)
         {
             level = level_;

@@ -19,5 +19,20 @@ namespace InternshipTest.Institution
         {
             listOfStudents.Add(student);
         }
+
+        public List<Student> GetStudents()
+        {
+            return listOfStudents;
+        }
+
+        public int CalcMidlKnowledge()
+        {   
+            int summ = 0;
+            foreach(Student student in listOfStudents)
+            {
+                summ += student.GetKnowledge();
+            }
+            return summ/listOfStudents.Count;
+        }
     }
 }

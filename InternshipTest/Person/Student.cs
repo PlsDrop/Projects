@@ -19,5 +19,15 @@ namespace InternshipTest.Person
         {
             this.knowledge = knowledge_;
         }
+
+        public int GetKnowledge()
+        {
+            return this.knowledge.level;
+        }
+
+        public string GetName()
+        {
+            return name;
+        }
     }
 }
