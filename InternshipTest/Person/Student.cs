@@ -15,14 +15,20 @@ namespace InternshipTest.Person
             name = name_;
         }
 
-        public void SetKnowledge(Knowledge knowledge_)
+        public void SetKnowledgeLevel(int lvl)
         {
-            this.knowledge = knowledge_;
+            knowledge.SetKnowledgeLevel(lvl);
         }
 
-        public int GetKnowledge()
+        public int GetKnowledgeInt()
         {
-            return this.knowledge.level;
+            return this.knowledge.GetKnowledgeLevel();
+        }
+
+
+        public Knowledge GetKnowledge()
+        {
+            return knowledge;
         }
 
         public string GetName()

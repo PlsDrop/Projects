@@ -6,33 +6,18 @@ using System.Collections.Generic;
 
 namespace InternshipTest.Institution.InterLink
 {
-    public class Internship
+    public class Internship : EducationalOrganization
     {
-        string name;
-        List<Student> listOfStudents = new List<Student>();
-        public Internship(string name_)
-        {
-            name = name_;
-        }
-
-        public string GetStudentsStr()
-        {   
-            string str = "";
-            foreach (Student student in listOfStudents)
-            {
-                str += $"{student.GetName()}\n";
-            }
-            return str;
-        }
+        public Internship(string name_) : base(name_){}
 
         public void AddStudent_FromUniversity(Student student, University university)
         {
-            if (student.GetKnowledge() > university.CalcMidlKnowledge())
+            if (student.GetKnowledgeInt() > university.CalcMidlKnowledge())
             {
                 listOfStudents.Add(student);
             }
         }
-        public void AddAllStudent_FromUniversity(University university)
+        public void AddAllStudents_FromUniversity(University university)
         {
             foreach (Student student in university.GetStudents())
             {
